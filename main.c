@@ -23,10 +23,10 @@ int	main(void)
 	int		i;
 	int		ret;
 
-	i = 4;
+	i = 6;
 	ret = 1;
 	fd = open("testfile.txt", O_RDONLY);
-	while (ret)
+	while (i && ret)
 	{
 		ret = get_next_line(fd, &line);
 		//printf("%i\n", ret);
@@ -35,6 +35,6 @@ int	main(void)
 		free(line);
 		line = NULL;
 	}
-	while (1) {}
+	//while (1) {}
 	return (0);
 }
