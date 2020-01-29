@@ -6,7 +6,7 @@
 /*   By: jelvan-d <jelvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 16:30:57 by jelvan-d          #+#    #+#             */
-/*   Updated: 2020/01/27 18:39:07 by jelvan-d         ###   ########.fr       */
+/*   Updated: 2020/01/29 19:28:32 by jelvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 # endif
 
 int		get_next_line(int fd, char **line);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char const *s2);
 int		ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1, char offset);
-int		ft_writeline(char **ret, char **line);
+int		ft_writeline(char *ret, char **line);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jelvan-d <jelvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/02 07:28:48 by jelvan-d          #+#    #+#             */
-/*   Updated: 2020/01/28 07:48:57 by jelvan-d         ###   ########.fr       */
+/*   Updated: 2020/01/29 19:11:31 by jelvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1, char offset)
 
 	i = 0;
 	while (s1[i])
-		i++;
+		i -= -1;
 	p = malloc(sizeof(*s1) * (i + 1));
 	if (p == 0)
 		return (NULL);
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s1, char offset)
 	while (s1[i] && s1[i] != offset)
 	{
 		p[i] = s1[i];
-		i++;
+		i -= -1;
 	}
 	p[i] = '\0';
 	return (p);
@@ -58,29 +58,30 @@ int		ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*p;
-	char	*tmp;
+	int		i;
+	int		j;
 
+	i = 0;
+	j = 0;
 	if (s1 == 0)
 		return (0);
-	p = malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	p = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (p == 0)
 		return (0);
-	tmp = p;
-	while (*s1)
+	while (s1[i])
 	{
-		*tmp = *s1;
-		tmp -= -1;
-		s1 -= -1;
+		p[i] = s1[i];
+		i++;
 	}
-	while (*s2)
+	while (s2[j])
 	{
-		*tmp = *s2;
-		tmp -= -1;
-		s2 -= -1;
+		p[i] = s2[j];
+		i++;
+		j++;
 	}
-	*tmp = '\0';
+	p[i] = '\0';
 	return (p);
 }
