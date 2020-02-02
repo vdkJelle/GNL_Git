@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jelvan-d <jelvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/30 16:30:55 by jelvan-d          #+#    #+#             */
-/*   Updated: 2020/02/01 19:42:54 by jelvan-d         ###   ########.fr       */
+/*   Created: 2020/02/01 19:55:53 by jelvan-d          #+#    #+#             */
+/*   Updated: 2020/02/01 19:56:40 by jelvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stdio.h>
+#include "get_next_line_bonus.h"
 
 int		ft_writeline(char **ret, char **line, int i)
 {
